@@ -1,0 +1,3 @@
+verilog work "rho.v"
+verilog work "pi.v"
+verilog work "top.v"

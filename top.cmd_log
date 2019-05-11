@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/top.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/top.syr" 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/top.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/top.syr" 

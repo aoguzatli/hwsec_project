@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/iota.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/iota.syr" 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/iota.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/iota.syr" 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/iota.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/iota.syr" 

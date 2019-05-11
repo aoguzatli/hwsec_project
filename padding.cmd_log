@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/padding.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/padding.syr" 

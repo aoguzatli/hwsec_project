@@ -1,0 +1,482 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: input_buffer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "input_buffer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "input_buffer"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : input_buffer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "input_buffer.v" in library work
+Module <input_buffer> compiled
+No errors in compilation
+Analysis of file <"input_buffer.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <input_buffer> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <input_buffer>.
+Module <input_buffer> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <input_buffer>.
+    Related source file is "input_buffer.v".
+    Register <buf1> equivalent to <buf0> has been removed
+    Register <buf2> equivalent to <buf0> has been removed
+    Register <buf3> equivalent to <buf0> has been removed
+    Register <buf4> equivalent to <buf0> has been removed
+    Register <buf5> equivalent to <buf0> has been removed
+    Register <buf6> equivalent to <buf0> has been removed
+    Register <buf7> equivalent to <buf0> has been removed
+    Found 136-bit register for signal <buf0>.
+    Summary:
+	inferred 136 D-type flip-flop(s).
+Unit <input_buffer> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 136-bit register                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 136
+ Flip-Flops                                            : 136
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <input_buffer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block input_buffer, actual ratio is 0.
+FlipFlop buf0_135 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_134 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_133 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_132 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_131 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_130 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_129 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_128 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_127 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_126 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_125 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_124 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_123 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_122 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_121 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_120 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_119 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_118 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_117 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_116 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_115 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_114 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_113 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_112 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_111 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_110 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_109 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_108 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_107 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_106 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_105 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_104 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_103 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_102 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_101 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_100 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_99 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_98 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_97 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_96 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_95 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_94 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_93 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_92 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_91 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_90 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_89 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_88 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_87 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_86 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_85 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_84 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_83 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_82 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_81 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_80 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_79 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_78 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_77 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_76 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_75 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_74 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_73 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_72 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_71 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_70 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_69 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_68 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_67 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_66 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_65 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_64 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_63 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_62 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_61 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_60 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_59 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_58 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_57 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_56 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_55 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_54 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_53 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_52 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_51 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_50 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_49 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_48 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_47 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_46 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_45 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_44 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_43 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_42 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_41 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_40 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_39 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_38 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_37 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_36 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_35 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_34 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_33 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_32 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_31 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_30 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_29 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_28 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_27 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_26 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_25 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_24 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_23 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_22 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_21 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_20 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_19 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_18 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_17 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_16 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_15 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_14 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_13 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_12 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_11 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_10 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_9 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_8 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_7 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_6 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_5 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_4 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_3 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_2 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_1 has been replicated 7 time(s) to handle iob=true attribute.
+FlipFlop buf0_0 has been replicated 7 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1088
+ Flip-Flops                                            : 1088
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : input_buffer.ngr
+Top Level Output File Name         : input_buffer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 1226
+
+Cell Usage :
+# FlipFlops/Latches                : 1088
+#      FDR                         : 1088
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1225
+#      IBUF                        : 137
+#      OBUF                        : 1088
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                        1226
+ Number of bonded IOBs:                1226  out of    640   191% (*) 
+    IOB Flip Flops/Latches:            1088
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+scan_clk                           | BUFGP                  | 1088  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 1.941ns
+   Maximum output required time after clock: 3.259ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'scan_clk'
+  Total number of paths / destination ports: 2176 / 2176
+-------------------------------------------------------------------------
+Offset:              1.941ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       buf0_0 (FF)
+  Destination Clock: scan_clk rising
+
+  Data Path: reset to buf0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1088   0.818   0.550  reset_IBUF (reset_IBUF)
+     FDR:R                     0.573          buf0_0
+    ----------------------------------------
+    Total                      1.941ns (1.391ns logic, 0.550ns route)
+                                       (71.7% logic, 28.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'scan_clk'
+  Total number of paths / destination ports: 1088 / 1088
+-------------------------------------------------------------------------
+Offset:              3.259ns (Levels of Logic = 1)
+  Source:            buf0_135_1 (FF)
+  Destination:       block<1087> (PAD)
+  Source Clock:      scan_clk rising
+
+  Data Path: buf0_135_1 to block<1087>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.471   0.336  buf0_135_1 (buf0_135_1)
+     OBUF:I->O                 2.452          block_1087_OBUF (block<1087>)
+    ----------------------------------------
+    Total                      3.259ns (2.923ns logic, 0.336ns route)
+                                       (89.7% logic, 10.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.62 secs
+ 
+--> 
+
+Total memory usage is 4567892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

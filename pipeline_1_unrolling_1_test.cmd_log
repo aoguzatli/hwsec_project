@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1_test.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1_test.syr" 

@@ -1,0 +1,636 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: theta.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "theta.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "theta"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : theta
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "theta.v" in library work
+Module <theta> compiled
+No errors in compilation
+Analysis of file <"theta.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <theta> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <theta>.
+Module <theta> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <theta>.
+    Related source file is "theta.v".
+    Found 1600-bit xor2 for signal <state_out>.
+    Found 320-bit xor5 for signal <parities>.
+    Found 1-bit xor2 for signal <state_out_0$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_10$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1000$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1001$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1002$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1003$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1004$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1005$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1006$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1007$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1008$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1009$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1010$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1011$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1012$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1013$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1014$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1015$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1016$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1017$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1018$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1019$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1020$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1021$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1022$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1023$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_11$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_12$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1280$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1281$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1282$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1283$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1284$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1285$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1286$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1287$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1288$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1289$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1290$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1291$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1292$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1293$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1294$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1295$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1296$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1297$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1298$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1299$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_13$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1300$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1301$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1302$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1303$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1304$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1305$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1306$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1307$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1308$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1309$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1310$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1311$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1312$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1313$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1314$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1315$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1316$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1317$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1318$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1319$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1320$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1321$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1322$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1323$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1324$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1325$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1326$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1327$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1328$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1329$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1330$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1331$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1332$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1333$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1334$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1335$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1336$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1337$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1338$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1339$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1340$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1341$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1342$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_1343$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_14$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_15$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_16$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_17$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_18$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_19$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_2$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_20$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_21$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_22$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_23$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_24$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_25$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_26$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_27$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_28$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_29$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_3$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_30$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_31$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_32$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_320$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_321$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_322$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_323$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_324$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_325$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_326$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_327$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_328$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_329$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_33$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_330$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_331$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_332$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_333$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_334$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_335$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_336$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_337$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_338$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_339$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_34$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_340$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_341$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_342$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_343$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_344$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_345$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_346$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_347$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_348$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_349$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_35$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_350$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_351$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_352$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_353$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_354$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_355$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_356$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_357$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_358$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_359$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_36$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_360$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_361$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_362$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_363$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_364$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_365$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_366$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_367$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_368$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_369$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_37$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_370$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_371$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_372$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_373$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_374$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_375$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_376$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_377$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_378$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_379$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_38$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_380$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_381$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_382$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_383$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_39$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_4$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_40$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_41$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_42$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_43$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_44$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_45$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_46$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_47$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_48$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_49$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_5$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_50$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_51$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_52$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_53$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_54$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_55$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_56$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_57$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_58$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_59$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_6$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_60$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_61$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_62$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_63$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_640$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_641$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_642$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_643$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_644$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_645$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_646$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_647$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_648$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_649$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_650$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_651$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_652$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_653$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_654$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_655$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_656$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_657$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_658$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_659$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_660$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_661$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_662$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_663$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_664$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_665$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_666$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_667$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_668$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_669$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_670$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_671$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_672$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_673$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_674$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_675$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_676$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_677$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_678$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_679$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_680$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_681$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_682$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_683$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_684$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_685$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_686$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_687$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_688$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_689$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_690$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_691$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_692$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_693$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_694$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_695$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_696$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_697$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_698$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_699$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_7$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_700$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_701$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_702$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_703$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_8$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_9$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_960$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_961$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_962$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_963$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_964$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_965$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_966$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_967$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_968$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_969$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_970$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_971$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_972$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_973$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_974$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_975$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_976$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_977$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_978$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_979$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_980$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_981$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_982$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_983$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_984$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_985$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_986$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_987$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_988$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_989$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_990$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_991$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_992$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_993$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_994$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_995$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_996$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_997$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_998$xor0000> created at line 60.
+    Found 1-bit xor2 for signal <state_out_999$xor0000> created at line 60.
+    Summary:
+	inferred 320 Xor(s).
+Unit <theta> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 2240
+ 1-bit xor2                                            : 1920
+ 1-bit xor5                                            : 320
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 2240
+ 1-bit xor2                                            : 1920
+ 1-bit xor5                                            : 320
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <theta> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block theta, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : theta.ngr
+Top Level Output File Name         : theta
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 3200
+
+Cell Usage :
+# BELS                             : 1920
+#      LUT3                        : 1600
+#      LUT5                        : 320
+# IO Buffers                       : 3200
+#      IBUF                        : 1600
+#      OBUF                        : 1600
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                 1920  out of  69120     2%  
+    Number used as Logic:              1920  out of  69120     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1920
+   Number with an unused Flip Flop:    1920  out of   1920   100%  
+   Number with an unused LUT:             0  out of   1920     0%  
+   Number of fully used LUT-FF pairs:     0  out of   1920     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                        3200
+ Number of bonded IOBs:                3200  out of    640   500% (*) 
+
+Specific Feature Utilization:
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 5.531ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 17600 / 1600
+-------------------------------------------------------------------------
+Delay:               5.531ns (Levels of Logic = 4)
+  Source:            state_in<126> (PAD)
+  Destination:       state_out<1599> (PAD)
+
+  Data Path: state_in<126> to state_out<1599>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.818   0.978  state_in_126_IBUF (state_in_126_IBUF)
+     LUT5:I0->O           10   0.094   0.759  Mxor_parities<62>_xo<0>1 (parities<62>)
+     LUT3:I0->O            1   0.094   0.336  Mxor_state_out<638>_Result1 (state_out_638_OBUF)
+     OBUF:I->O                 2.452          state_out_638_OBUF (state_out<638>)
+    ----------------------------------------
+    Total                      5.531ns (3.458ns logic, 2.073ns route)
+                                       (62.5% logic, 37.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 21.36 secs
+ 
+--> 
+
+Total memory usage is 4650960 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

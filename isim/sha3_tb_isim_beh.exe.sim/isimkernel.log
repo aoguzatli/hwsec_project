@@ -1,0 +1,10 @@
+Command line:
+   sha3_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50631
+
+Sat May 11 19:20:27 2019
+
+
+ Elaboration Time: 0.296875 sec

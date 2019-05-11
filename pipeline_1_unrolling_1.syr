@@ -1,0 +1,1290 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: pipeline_1_unrolling_1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pipeline_1_unrolling_1.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pipeline_1_unrolling_1"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : pipeline_1_unrolling_1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "theta.v" in library work
+Compiling verilog file "rho.v" in library work
+Module <theta> compiled
+Compiling verilog file "RC_lookup.v" in library work
+Module <rho> compiled
+Compiling verilog file "pi.v" in library work
+Module <RC_lookup> compiled
+Compiling verilog file "iota.v" in library work
+Module <pi> compiled
+Compiling verilog file "chi.v" in library work
+Module <iota> compiled
+Compiling verilog file "VIO.v" in library work
+Module <chi> compiled
+Compiling verilog file "round_comb.v" in library work
+Module <VIO> compiled
+Compiling verilog file "input_buffer.v" in library work
+Module <round_comb> compiled
+Compiling verilog file "ILA.v" in library work
+Module <input_buffer> compiled
+Compiling verilog file "ICON.v" in library work
+Module <ILA> compiled
+Compiling verilog file "absorb_stage.v" in library work
+Module <ICON> compiled
+Compiling verilog file "pipeline_1_unrolling_1.v" in library work
+Module <absorb_stage> compiled
+Module <pipeline_1_unrolling_1> compiled
+No errors in compilation
+Analysis of file <"pipeline_1_unrolling_1.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <pipeline_1_unrolling_1> in library <work>.
+
+Analyzing hierarchy for module <input_buffer> in library <work>.
+
+Analyzing hierarchy for module <absorb_stage> in library <work>.
+
+Analyzing hierarchy for module <round_comb> in library <work>.
+
+Analyzing hierarchy for module <RC_lookup> in library <work>.
+
+Analyzing hierarchy for module <theta> in library <work>.
+
+Analyzing hierarchy for module <rho> in library <work>.
+
+Analyzing hierarchy for module <pi> in library <work>.
+
+Analyzing hierarchy for module <chi> in library <work>.
+
+Analyzing hierarchy for module <iota> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <pipeline_1_unrolling_1>.
+WARNING:Xst:852 - "pipeline_1_unrolling_1.v" line 44: Unconnected input port 'clk' of instance 'absorb' is tied to GND.
+WARNING:Xst:852 - "pipeline_1_unrolling_1.v" line 44: Unconnected input port 'reset' of instance 'absorb' is tied to GND.
+WARNING:Xst:852 - "pipeline_1_unrolling_1.v" line 44: Unconnected input port 'enable' of instance 'absorb' is tied to GND.
+WARNING:Xst:2211 - "ICON.v" line 77: Instantiating black box module <ICON>.
+WARNING:Xst:2211 - "VIO.v" line 81: Instantiating black box module <VIO>.
+WARNING:Xst:2211 - "ILA.v" line 86: Instantiating black box module <ILA>.
+Module <pipeline_1_unrolling_1> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  TRUE" for instance <ICON0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <ICON0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <ICON0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "KEEP =  TRUE" for instance <VIO0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <VIO0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <VIO0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "KEEP =  TRUE" for instance <ILA0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <ILA0> in unit <pipeline_1_unrolling_1>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <ILA0> in unit <pipeline_1_unrolling_1>.
+Analyzing module <input_buffer> in library <work>.
+Module <input_buffer> is correct for synthesis.
+ 
+Analyzing module <absorb_stage> in library <work>.
+Module <absorb_stage> is correct for synthesis.
+ 
+Analyzing module <round_comb> in library <work>.
+Module <round_comb> is correct for synthesis.
+ 
+Analyzing module <RC_lookup> in library <work>.
+Module <RC_lookup> is correct for synthesis.
+ 
+Analyzing module <theta> in library <work>.
+Module <theta> is correct for synthesis.
+ 
+Analyzing module <rho> in library <work>.
+Module <rho> is correct for synthesis.
+ 
+Analyzing module <pi> in library <work>.
+Module <pi> is correct for synthesis.
+ 
+Analyzing module <chi> in library <work>.
+Module <chi> is correct for synthesis.
+ 
+Analyzing module <iota> in library <work>.
+Module <iota> is correct for synthesis.
+ 
+    Set property "SYN_NOPRUNE = 1" for unit <ICON>.
+    Set property "SYN_NOPRUNE = 1" for unit <VIO>.
+    Set property "SYN_NOPRUNE = 1" for unit <ILA>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <input_buffer>.
+    Related source file is "input_buffer.v".
+    Found 1088-bit register for signal <block>.
+    Summary:
+	inferred 1088 D-type flip-flop(s).
+Unit <input_buffer> synthesized.
+
+
+Synthesizing Unit <absorb_stage>.
+    Related source file is "absorb_stage.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1088-bit xor2 for signal <xored_padded_block<1087:0>>.
+Unit <absorb_stage> synthesized.
+
+
+Synthesizing Unit <RC_lookup>.
+    Related source file is "RC_lookup.v".
+    Found 32x64-bit ROM for signal <round_constant>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <RC_lookup> synthesized.
+
+
+Synthesizing Unit <theta>.
+    Related source file is "theta.v".
+    Found 1600-bit xor2 for signal <state_out>.
+    Found 320-bit xor5 for signal <parities>.
+    Found 1-bit xor2 for signal <state_out_0$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_1$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_10$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_100$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_101$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_102$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_103$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_104$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_105$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_106$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_107$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_108$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_109$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_11$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_110$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_111$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_112$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_113$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_114$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_115$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_116$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_117$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_118$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_119$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_12$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_120$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_121$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_122$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_123$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_124$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_125$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_126$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_127$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_128$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_129$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_13$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_130$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_131$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_132$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_133$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_134$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_135$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_136$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_137$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_138$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_139$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_14$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_140$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_141$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_142$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_143$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_144$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_145$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_146$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_147$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_148$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_149$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_15$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_150$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_151$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_152$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_153$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_154$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_155$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_156$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_157$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_158$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_159$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_16$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_160$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_161$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_162$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_163$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_164$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_165$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_166$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_167$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_168$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_169$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_17$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_170$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_171$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_172$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_173$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_174$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_175$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_176$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_177$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_178$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_179$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_18$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_180$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_181$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_182$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_183$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_184$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_185$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_186$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_187$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_188$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_189$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_19$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_190$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_191$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_192$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_193$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_194$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_195$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_196$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_197$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_198$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_199$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_2$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_20$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_200$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_201$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_202$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_203$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_204$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_205$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_206$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_207$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_208$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_209$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_21$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_210$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_211$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_212$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_213$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_214$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_215$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_216$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_217$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_218$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_219$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_22$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_220$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_221$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_222$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_223$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_224$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_225$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_226$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_227$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_228$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_229$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_23$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_230$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_231$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_232$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_233$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_234$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_235$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_236$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_237$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_238$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_239$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_24$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_240$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_241$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_242$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_243$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_244$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_245$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_246$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_247$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_248$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_249$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_25$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_250$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_251$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_252$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_253$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_254$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_255$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_256$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_257$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_258$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_259$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_26$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_260$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_261$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_262$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_263$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_264$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_265$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_266$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_267$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_268$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_269$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_27$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_270$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_271$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_272$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_273$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_274$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_275$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_276$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_277$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_278$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_279$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_28$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_280$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_281$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_282$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_283$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_284$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_285$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_286$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_287$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_288$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_289$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_29$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_290$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_291$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_292$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_293$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_294$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_295$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_296$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_297$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_298$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_299$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_3$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_30$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_300$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_301$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_302$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_303$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_304$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_305$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_306$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_307$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_308$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_309$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_31$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_310$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_311$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_312$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_313$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_314$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_315$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_316$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_317$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_318$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_319$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_32$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_33$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_34$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_35$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_36$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_37$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_38$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_39$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_4$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_40$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_41$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_42$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_43$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_44$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_45$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_46$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_47$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_48$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_49$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_5$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_50$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_51$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_52$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_53$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_54$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_55$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_56$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_57$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_58$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_59$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_6$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_60$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_61$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_62$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_63$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_64$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_65$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_66$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_67$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_68$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_69$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_7$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_70$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_71$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_72$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_73$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_74$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_75$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_76$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_77$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_78$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_79$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_8$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_80$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_81$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_82$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_83$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_84$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_85$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_86$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_87$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_88$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_89$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_9$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_90$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_91$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_92$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_93$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_94$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_95$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_96$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_97$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_98$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <state_out_99$xor0000> created at line 61.
+    Summary:
+	inferred 320 Xor(s).
+Unit <theta> synthesized.
+
+
+Synthesizing Unit <rho>.
+    Related source file is "rho.v".
+Unit <rho> synthesized.
+
+
+Synthesizing Unit <pi>.
+    Related source file is "pi.v".
+Unit <pi> synthesized.
+
+
+Synthesizing Unit <chi>.
+    Related source file is "chi.v".
+    Found 1600-bit xor2 for signal <state_out>.
+Unit <chi> synthesized.
+
+
+Synthesizing Unit <iota>.
+    Related source file is "iota.v".
+    Found 64-bit xor2 for signal <state_out<63:0>>.
+Unit <iota> synthesized.
+
+
+Synthesizing Unit <round_comb>.
+    Related source file is "round_comb.v".
+    Found 1-bit register for signal <flag_rounds_completed>.
+    Found 5-bit register for signal <round_out>.
+    Found 1600-bit register for signal <state_out>.
+    Found 5-bit adder for signal <round_out$add0000> created at line 52.
+    Summary:
+	inferred 1606 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <round_comb> synthesized.
+
+
+Synthesizing Unit <pipeline_1_unrolling_1>.
+    Related source file is "pipeline_1_unrolling_1.v".
+Unit <pipeline_1_unrolling_1> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x64-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 1088-bit register                                     : 1
+ 1600-bit register                                     : 1
+ 5-bit register                                        : 1
+# Xors                                                 : 4992
+ 1-bit xor2                                            : 4672
+ 1-bit xor5                                            : 320
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ICON.ngc>.
+Reading core <VIO.ngc>.
+Reading core <ILA.ngc>.
+Loading core <ICON> for timing and area information for instance <ICON0>.
+Loading core <VIO> for timing and area information for instance <VIO0>.
+Loading core <ILA> for timing and area information for instance <ILA0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x64-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 2694
+ Flip-Flops                                            : 2694
+# Xors                                                 : 4992
+ 1-bit xor2                                            : 4672
+ 1-bit xor5                                            : 320
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pipeline_1_unrolling_1> ...
+
+Optimizing unit <input_buffer> ...
+
+Optimizing unit <theta> ...
+
+Optimizing unit <round_comb> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pipeline_1_unrolling_1, actual ratio is 10.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2694
+ Flip-Flops                                            : 2694
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pipeline_1_unrolling_1.ngr
+Top Level Output File Name         : pipeline_1_unrolling_1
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 257
+
+Cell Usage :
+# BELS                             : 6087
+#      GND                         : 7
+#      INV                         : 264
+#      LUT1                        : 69
+#      LUT2                        : 24
+#      LUT3                        : 2389
+#      LUT4                        : 128
+#      LUT5                        : 3012
+#      LUT6                        : 25
+#      MUXCY_L                     : 78
+#      MUXF5                       : 2
+#      MUXF6                       : 1
+#      MUXF7                       : 9
+#      MUXF8                       : 2
+#      VCC                         : 11
+#      XORCY                       : 66
+# FlipFlops/Latches                : 5475
+#      FD                          : 1089
+#      FDC                         : 1
+#      FDCE                        : 536
+#      FDE                         : 1828
+#      FDP                         : 3
+#      FDPE                        : 4
+#      FDR                         : 51
+#      FDRE                        : 1947
+#      FDRS                        : 4
+#      FDS                         : 10
+#      FDSE                        : 1
+#      LDC                         : 1
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Shift Registers                  : 39
+#      SRL16                       : 1
+#      SRL16E                      : 1
+#      SRLC16E                     : 8
+#      SRLC32E                     : 29
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 256
+#      OBUF                        : 256
+# Others                           : 1
+#      BSCAN_VIRTEX5               : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            5475  out of  69120     7%  
+ Number of Slice LUTs:                 5950  out of  69120     8%  
+    Number used as Logic:              5911  out of  69120     8%  
+    Number used as Memory:               39  out of  17920     0%  
+       Number used as SRL:               39
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   8966
+   Number with an unused Flip Flop:    3491  out of   8966    38%  
+   Number with an unused LUT:          3016  out of   8966    33%  
+   Number of fully used LUT-FF pairs:  2459  out of   8966    27%  
+   Number of unique control sets:       830
+
+IO Utilization: 
+ Number of IOs:                         257
+ Number of bonded IOBs:                 257  out of    640    40%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    148     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+Clock Signal                                                            | Clock buffer(FF name)                                       | Load  |
+------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                            | BUFG                                                        | 2179  |
+ICON0/U0/iUPDATE_OUT                                                    | NONE(ICON0/U0/U_ICON/U_iDATA_CMD)                           | 1     |
+round/state_out_0                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_1                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[1].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_2                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[2].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_3                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[3].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_4                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[4].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_5                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[5].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_6                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[6].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_7                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[7].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_8                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[8].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_9                                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[9].ASYNC_IN_CELL/U_RISING)  | 2     |
+round/state_out_10                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[10].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_11                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[11].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_12                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[12].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_13                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[13].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_14                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[14].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_15                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[15].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_16                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[16].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_17                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[17].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_18                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[18].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_19                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[19].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_20                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[20].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_21                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[21].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_22                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[22].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_23                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[23].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_24                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[24].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_25                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[25].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_26                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[26].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_27                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[27].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_28                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[28].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_29                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[29].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_30                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[30].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_31                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[31].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_32                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[32].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_33                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[33].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_34                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[34].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_35                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[35].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_36                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[36].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_37                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[37].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_38                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[38].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_39                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[39].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_40                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[40].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_41                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[41].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_42                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[42].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_43                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[43].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_44                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[44].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_45                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[45].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_46                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[46].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_47                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[47].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_48                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[48].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_49                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[49].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_50                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[50].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_51                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[51].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_52                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[52].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_53                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[53].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_54                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[54].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_55                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[55].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_56                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[56].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_57                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[57].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_58                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[58].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_59                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[59].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_60                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[60].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_61                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[61].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_62                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[62].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_63                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[63].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_64                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[64].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_65                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[65].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_66                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[66].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_67                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[67].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_68                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[68].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_69                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[69].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_70                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[70].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_71                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[71].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_72                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[72].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_73                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[73].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_74                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[74].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_75                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[75].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_76                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[76].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_77                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[77].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_78                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[78].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_79                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[79].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_80                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[80].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_81                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[81].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_82                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[82].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_83                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[83].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_84                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[84].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_85                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[85].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_86                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[86].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_87                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[87].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_88                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[88].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_89                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[89].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_90                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[90].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_91                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[91].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_92                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[92].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_93                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[93].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_94                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[94].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_95                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[95].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_96                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[96].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_97                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[97].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_98                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[98].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_99                                                      | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[99].ASYNC_IN_CELL/U_RISING) | 2     |
+round/state_out_100                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[100].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_101                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[101].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_102                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[102].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_103                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[103].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_104                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[104].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_105                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[105].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_106                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[106].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_107                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[107].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_108                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[108].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_109                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[109].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_110                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[110].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_111                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[111].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_112                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[112].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_113                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[113].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_114                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[114].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_115                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[115].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_116                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[116].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_117                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[117].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_118                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[118].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_119                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[119].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_120                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[120].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_121                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[121].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_122                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[122].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_123                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[123].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_124                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[124].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_125                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[125].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_126                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[126].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_127                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[127].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_128                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[128].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_129                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[129].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_130                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[130].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_131                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[131].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_132                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[132].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_133                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[133].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_134                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[134].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_135                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[135].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_136                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[136].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_137                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[137].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_138                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[138].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_139                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[139].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_140                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[140].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_141                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[141].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_142                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[142].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_143                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[143].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_144                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[144].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_145                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[145].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_146                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[146].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_147                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[147].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_148                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[148].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_149                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[149].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_150                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[150].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_151                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[151].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_152                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[152].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_153                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[153].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_154                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[154].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_155                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[155].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_156                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[156].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_157                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[157].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_158                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[158].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_159                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[159].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_160                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[160].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_161                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[161].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_162                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[162].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_163                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[163].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_164                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[164].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_165                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[165].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_166                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[166].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_167                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[167].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_168                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[168].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_169                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[169].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_170                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[170].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_171                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[171].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_172                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[172].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_173                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[173].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_174                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[174].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_175                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[175].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_176                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[176].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_177                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[177].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_178                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[178].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_179                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[179].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_180                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[180].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_181                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[181].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_182                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[182].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_183                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[183].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_184                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[184].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_185                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[185].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_186                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[186].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_187                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[187].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_188                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[188].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_189                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[189].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_190                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[190].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_191                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[191].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_192                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[192].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_193                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[193].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_194                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[194].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_195                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[195].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_196                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[196].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_197                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[197].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_198                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[198].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_199                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[199].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_200                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[200].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_201                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[201].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_202                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[202].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_203                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[203].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_204                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[204].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_205                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[205].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_206                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[206].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_207                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[207].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_208                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[208].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_209                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[209].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_210                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[210].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_211                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[211].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_212                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[212].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_213                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[213].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_214                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[214].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_215                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[215].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_216                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[216].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_217                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[217].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_218                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[218].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_219                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[219].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_220                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[220].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_221                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[221].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_222                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[222].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_223                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[223].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_224                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[224].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_225                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[225].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_226                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[226].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_227                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[227].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_228                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[228].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_229                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[229].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_230                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[230].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_231                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[231].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_232                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[232].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_233                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[233].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_234                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[234].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_235                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[235].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_236                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[236].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_237                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[237].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_238                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[238].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_239                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[239].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_240                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[240].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_241                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[241].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_242                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[242].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_243                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[243].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_244                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[244].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_245                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[245].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_246                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[246].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_247                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[247].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_248                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[248].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_249                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[249].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_250                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[250].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_251                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[251].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_252                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[252].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_253                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[253].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_254                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[254].ASYNC_IN_CELL/U_RISING)| 2     |
+round/state_out_255                                                     | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[255].ASYNC_IN_CELL/U_RISING)| 2     |
+clk                                                                     | BUFGP                                                       | 1735  |
+ICON0/CONTROL1<13>(ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE:O)| NONE(*)(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC)           | 1     |
+VIO0/ASYNC_OUT<2>1                                                      | BUFG                                                        | 1088  |
+------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                       | Buffer(FF name)                                                                                                                                                                         | Load  |
+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+VIO0/U0/I_VIO/RESET(VIO0/U0/I_VIO/reset_f_edge/I_H2L.U_DOUT:Q)                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/U_FALLING)                                                                                                                             | 512   |
+ICON0/U0/U_ICON/U_CMD/iSEL_n(ICON0/U0/U_ICON/U_CMD/U_SEL_n:O)                                        | NONE(ICON0/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                                                                                                 | 10    |
+ILA0/N1(ILA0/XST_VCC:P)                                                                              | NONE(ILA0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb16/U_RAMB16)                            | 4     |
+ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iCLR(ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)        | NONE(ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                                                                                                    | 4     |
+ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iCLR(ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)      | NONE(ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                                                                                                   | 4     |
+ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iCLR(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)              | NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                                                                                       | 4     |
+ILA0/N0(ILA0/XST_GND:G)                                                                              | NONE(ILA0/U0/I_DQ.G_DW[0].U_DQ)                                                                                                                                                         | 3     |
+ICON0/CONTROL1<20>(ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE:O)                             | NONE(ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/G_GAND_DLY1[0].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1)| 2     |
+ILA0/U0/I_YES_D.U_ILA/iARM(ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)             | NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                                                                                         | 2     |
+ICON0/CONTROL1<13>(ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE:O)                             | NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                                                                                         | 1     |
+ICON0/U0/U_ICON/iSEL_n(ICON0/U0/U_ICON/U_iSEL_n:O)                                                   | NONE(ICON0/U0/U_ICON/U_iDATA_CMD)                                                                                                                                                       | 1     |
+ILA0/U0/I_YES_D.U_ILA/U_STAT/ACTRESET_pulse(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)| NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_RISING)                                                                                                                                             | 1     |
+ILA0/U0/I_YES_D.U_ILA/iRESET<1>(ILA0/U0/I_YES_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                        | NONE(ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                                                                                      | 1     |
+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 6.084ns (Maximum Frequency: 164.366MHz)
+   Minimum input arrival time before clock: 5.423ns
+   Maximum output required time after clock: 3.286ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Clock period: 6.084ns (frequency: 164.366MHz)
+  Total number of paths / destination ports: 24212 / 3589
+-------------------------------------------------------------------------
+Delay:               6.084ns (Levels of Logic = 7)
+  Source:            ICON0/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET (FF)
+  Destination:       VIO0/U0/I_VIO/U_STATUS/U_TDO (FF)
+  Source Clock:      ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+  Destination Clock: ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ICON0/U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET to VIO0/U0/I_VIO/U_STATUS/U_TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            17   0.471   0.877  U0/U_ICON/U_CMD/G_TARGET[8].I_NE0.U_TARGET (U0/U_ICON/U_CMD/iTARGET<8>)
+     LUT4:I0->O            4   0.094   0.726  U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[1].U_LUT (U0/U_ICON/iCOMMAND_SEL<1>)
+     LUT4:I1->O          769   0.094   1.187  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_LCE (CONTROL0<5>)
+     end scope: 'ICON0'
+     begin scope: 'VIO0'
+     LUT5:I0->O            1   0.094   0.480  U0/I_VIO/U_STATUS/iSTAT_CNT<7>260_SW0 (N38)
+     LUT6:I5->O            1   0.094   0.710  U0/I_VIO/U_STATUS/iSTAT_CNT<7>260 (U0/I_VIO/U_STATUS/iSTAT_CNT<7>260)
+     LUT4:I1->O            1   0.094   1.069  U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O_5_f7_SW0 (N36)
+     LUT6:I0->O            1   0.094   0.000  U0/I_VIO/U_STATUS/iSTAT_CNT<7>316 (U0/I_VIO/U_STATUS/TDO_next)
+     FDE:D                    -0.018          U0/I_VIO/U_STATUS/U_TDO
+    ----------------------------------------
+    Total                      6.084ns (1.035ns logic, 5.049ns route)
+                                       (17.0% logic, 83.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ICON0/U0/iUPDATE_OUT'
+  Clock period: 1.392ns (frequency: 718.391MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.392ns (Levels of Logic = 1)
+  Source:            ICON0/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       ICON0/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      ICON0/U0/iUPDATE_OUT rising
+  Destination Clock: ICON0/U0/iUPDATE_OUT rising
+
+  Data Path: ICON0/U0/U_ICON/U_iDATA_CMD to ICON0/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.471   0.347  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.238   0.336  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                    -0.018          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      1.392ns (0.709ns logic, 0.683ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.575ns (frequency: 218.579MHz)
+  Total number of paths / destination ports: 89247 / 1861
+-------------------------------------------------------------------------
+Delay:               4.575ns (Levels of Logic = 4)
+  Source:            round/flag_rounds_completed (FF)
+  Destination:       round/state_out_1295 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: round/flag_rounds_completed to round/state_out_1295
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q          2178   0.471   0.694  round/flag_rounds_completed (round/flag_rounds_completed)
+     LUT3:I2->O            2   0.094   0.978  absorb/next_state<1038>1 (next_state<1038>)
+     LUT5:I0->O           19   0.094   1.072  round/t/Mxor_parities<78>_xo<0>1 (round/t/parities<78>)
+     LUT5:I0->O            3   0.094   0.984  round/t/Mxor_state_out<15>_Result1 (round/theta_out<15>)
+     LUT5:I0->O            1   0.094   0.000  round/c/Mxor_state_out<1295>_Result1 (round/chi_out<1295>)
+     FDRE:D                   -0.018          round/state_out_1295
+    ----------------------------------------
+    Total                      4.575ns (0.847ns logic, 3.728ns route)
+                                       (18.5% logic, 81.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VIO0/ASYNC_OUT<2>1'
+  Clock period: 0.818ns (frequency: 1222.494MHz)
+  Total number of paths / destination ports: 952 / 952
+-------------------------------------------------------------------------
+Delay:               0.818ns (Levels of Logic = 0)
+  Source:            inputbuf/block_1087 (FF)
+  Destination:       inputbuf/block_951 (FF)
+  Source Clock:      VIO0/ASYNC_OUT<2>1 rising
+  Destination Clock: VIO0/ASYNC_OUT<2>1 rising
+
+  Data Path: inputbuf/block_1087 to inputbuf/block_951
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.471   0.347  inputbuf/block_1087 (inputbuf/block_1087)
+     FD:D                     -0.018          inputbuf/block_951
+    ----------------------------------------
+    Total                      0.818ns (0.471ns logic, 0.347ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 1957 / 1915
+-------------------------------------------------------------------------
+Offset:              5.423ns (Levels of Logic = 7)
+  Source:            ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       VIO0/U0/I_VIO/U_STATUS/U_TDO (FF)
+  Destination Clock: ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to VIO0/U0/I_VIO/U_STATUS/U_TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_VIRTEX5:SHIFT    3   0.000   0.491  U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           64   0.094   0.922  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O          769   0.094   1.187  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_LCE (CONTROL0<5>)
+     end scope: 'ICON0'
+     begin scope: 'VIO0'
+     LUT5:I0->O            1   0.094   0.480  U0/I_VIO/U_STATUS/iSTAT_CNT<7>260_SW0 (N38)
+     LUT6:I5->O            1   0.094   0.710  U0/I_VIO/U_STATUS/iSTAT_CNT<7>260 (U0/I_VIO/U_STATUS/iSTAT_CNT<7>260)
+     LUT4:I1->O            1   0.094   1.069  U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O_5_f7_SW0 (N36)
+     LUT6:I0->O            1   0.094   0.000  U0/I_VIO/U_STATUS/iSTAT_CNT<7>316 (U0/I_VIO/U_STATUS/TDO_next)
+     FDE:D                    -0.018          U0/I_VIO/U_STATUS/U_TDO
+    ----------------------------------------
+    Total                      5.423ns (0.564ns logic, 4.859ns route)
+                                       (10.4% logic, 89.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 256 / 256
+-------------------------------------------------------------------------
+Offset:              3.286ns (Levels of Logic = 1)
+  Source:            round/state_out_255 (FF)
+  Destination:       digest<255> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: round/state_out_255 to digest<255>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.471   0.363  round/state_out_255 (round/state_out_255)
+     OBUF:I->O                 2.452          digest_255_OBUF (digest<255>)
+    ----------------------------------------
+    Total                      3.286ns (2.923ns logic, 0.363ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.471ns (Levels of Logic = 0)
+  Source:            ICON0/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
+  Source Clock:      ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ICON0/U0/U_ICON/U_TDO_reg to ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.471   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_VIRTEX5:TDO          0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS
+    ----------------------------------------
+    Total                      0.471ns (0.471ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to ICON0.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to ICON0.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to VIO0.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to VIO0.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to ILA0.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to ILA0.
+
+
+Total REAL time to Xst completion: 120.00 secs
+Total CPU time to Xst completion: 119.42 secs
+ 
+--> 
+
+Total memory usage is 4955352 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

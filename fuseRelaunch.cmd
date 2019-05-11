@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb_isim_beh.exe" -prj "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb_beh.prj" "work.sha3_tb" "work.glbl" 

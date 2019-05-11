@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/input_buffer.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/input_buffer.syr" 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/input_buffer.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/input_buffer.syr" 
