@@ -30,7 +30,7 @@ generate
 			for (k = 0; k < 64; k=k+1) begin: kloop
 			
 				assign state_out[(5*j+i)*64 + k] = state_in[(5*j + i)*64 + k] ^ 
-																((~state_in[(i + 5*((j+1)%5))*64 + k]) && state_in[(i + 5*((j+2)%5))*64 + k]);
+																((~state_in[((i+1)%5 + 5*((j+0)%5))*64 + k]) && state_in[((i+2)%5 + 5*((j+0)%5))*64 + k]);
 			
 			end
 		end
