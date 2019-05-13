@@ -1,0 +1,26 @@
+00:38:14    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv -pid 14415 -toolin /tmp/vcs_20190513043800_14412_sukeerts..stdin -toolout /tmp/vcs_20190513043800_14412_sukeerts..stdout  
+00:38:14    17 -->                                                                 [tcl] set ucliGUI::state
+00:38:14    18 -->                                                                     [tcl] gui_update_simulator_buttons
+00:38:16    19 -->                                                                         [tcl] gui_update_simulator_buttons
+00:38:17    20 -->                                                                             [tcl] set ucliGUI::state
+00:38:17    21 -->                                                                                 [tcl] ucliCore::getToolPID
+00:38:17    22 -->                                                                                     [tcl] synopsys::env hasTB
+00:38:17    23 -->                                                                                         [tcl] trigger_hier_stack_context_switch 0
+00:38:17    24 -->                                                                                             [tcl] synUtils::setDVEInitPhase 1
+00:38:17    25 --> ...  [tcl] gui_get_env SIMSETUP::SIMVPD
+00:38:17    26 --> ...      [tcl] synopsys::dump -type VPD -file /afs/ece.cmu.edu/usr/sukeerts/HW_SEC_pipelined/inter.vpd -locking
+00:38:17    27 --> ...          [tcl] gui_update_simulator_buttons
+00:38:18    28 --> ...              [tcl] synopsys::dump -autoflush on -fid VPD0
+00:38:18    29 --> ...                  [tcl] set ::dve_fid VPD0
+00:38:18    30 --> ...                      [tcl] synUtils::setDVEInitPhase 0
+00:38:18    31 --> ...                          [tcl] ucliCore::getToolPID
+00:38:18    32 --> ...                              [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnp1lqVKX
+00:38:18    33 --> ...                                  [tcl] synUtils::sendTool -active {_icl_start_rpc -single_cpu -version "K-2015.09_Full64" -sync_file /tmp/vcs_dve_rpc.sukeerts.14415}
+00:38:18    34 --> ...                                      [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.sukeerts.14415}
+00:38:18    35 --> ...                                          [tcl] dveMisc::vbusExpand sha3_tb
+00:38:18    36 --> ...                                              [tcl] config endofsim noexit
+00:38:18    37 --> ...                                                  [tcl] config onfail enable all
+00:38:19    38 --> ...                                                      [tcl] config syscaddplainmembers
+00:38:19    39 --> ...                                                          [tcl] config syscaddsourcenames
+00:38:19    40 --> ...                                                              [tcl] config syscaddstructtypes
+00:38:19    41 --> ...                                                                  [tcl] synopsys::listing -disable

@@ -1,0 +1,122 @@
+0 
+43
++itf+/usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/local/synopsys/vcs-mx_vK-2015.09/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vK-2015.09/include
+-debug_access+r+driver
+-gen_obj
+-picarchive
+/usr/local/synopsys/vcs-mx_vK-2015.09/linux64/bin/vcs1
+ICON.v
+ILA.v
+RC_lookup.v
+VIO.v
+absorb_stage.v
+chi.v
+chipscope_top.v
+input_buffer.v
+iota.v
+macros.v
+macros.v
+padding.v
+pi.v
+pipeline_1_unrolling_1.v
+rho.v
+round_comb.v
+sha3_tb.v
+test.v
+theta.v
+top.v
+47
+sysc_uni_pwd=/afs/ece.cmu.edu/usr/sukeerts/HW_SEC_pipelined
+XDG_SESSION_ID=1577
+XDG_RUNTIME_DIR=/run/user/2655004
+XDG_DATA_DIRS=/afs/ece.cmu.edu/usr/sukeerts/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VMR_MODE_FLAG=32
+VCS_VERSION=vcs-mx_vK-2015.09
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LIC_EXPIRE_WARNING=0
+VCS_HOME=/usr/local/synopsys/vcs-mx_vK-2015.09
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/usr/local/synopsys/vcs-mx_vK-2015.09/linux64
+SYNOPSYS_LICENSE=/afs/ece.cmu.edu/support/synopsys/license.dat
+SYNOPSYS_HOME=/usr/local/synopsys
+SSH_TTY=/dev/pts/2
+SSH_CONNECTION=73.117.49.176 53151 128.2.131.37 22
+SSH_CLIENT=73.117.49.176 53151 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:2655004
+KDEDIRS=/usr
+HISTCONTROL=ignoredups
+DC_VERSION=syn-vJ-2014.09-SP4
+DC_HOME=/usr/local/synopsys/syn-vJ-2014.09-SP4
+CVS_RSH=ssh
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+AKLOG=/usr/bin/aklog
+0
+21
+1557721120 test.v
+1557719620 top.v
+1557722057 round_comb.v
+1557722142 RC_lookup.v
+1557721109 pipeline_1_unrolling_1.v
+1557719620 macros.v
+1557719620 macros.v
+1557719620 input_buffer.v
+1557719620 ILA.v
+1557719620 ICON.v
+1557719620 chipscope_top.v
+1557719620 VIO.v
+1557719620 theta.v
+1557719620 rho.v
+1557719620 pi.v
+1557719620 padding.v
+1557719620 iota.v
+1557719620 chi.v
+1557722106 absorb_stage.v
+1557719620 sha3_tb.v
+1440562444 /usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/vcsdp_lite.tab
+4
+0 
+1440563255 /usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/libvirsim.so
+1440562843 /usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/liberrorinf.so
+1440562824 /usr/local/synopsys/vcs-mx_vK-2015.09/linux64/lib/libsnpsmalloc.so
+1557722188 simv.daidir

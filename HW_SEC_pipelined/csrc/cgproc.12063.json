@@ -1,0 +1,78 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "chi_0000": {},
+        "sha3_tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "iota_0000": {},
+        "chipscope_top": {},
+        "pipeline_1_unrolling_1": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "pi_0000": {},
+        "padding": {},
+        "rho_0000": {},
+        "round_comb": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "top": {}
+    },
+    "CompUnits": {
+        "JWVVq_d": {
+            "mod": "round_comb",
+            "out": "JWVVq_d.o",
+            "archive": "archive.2/_12063_archive_1.a",
+            "bytes": 2569348,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "v69jY_d": {
+            "mod": "sha3_tb",
+            "out": "v69jY_d.o",
+            "archive": "archive.2/_12063_archive_1.a",
+            "bytes": 16843,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 8097,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "QEz3C_d": {
+            "mod": "pipeline_1_unrolling_1",
+            "out": "QEz3C_d.o",
+            "archive": "archive.2/_12063_archive_1.a",
+            "bytes": 42961,
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "archive": "archive.2/_12063_archive_1.a",
+            "objects": [
+                [
+                    "v69jY_d.o",
+                    16843
+                ],
+                [
+                    "QEz3C_d.o",
+                    42961
+                ],
+                [
+                    "JWVVq_d.o",
+                    2569348
+                ]
+            ],
+            "size": 2629152
+        }
+    ]
+}
