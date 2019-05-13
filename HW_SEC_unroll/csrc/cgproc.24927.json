@@ -1,0 +1,48 @@
+{
+    "ObjArchives": [
+        {
+            "size": 17798,
+            "archive": "archive.3/_24927_archive_1.a",
+            "objects": [
+                [
+                    "v69jY_d.o",
+                    17798
+                ]
+            ]
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {},
+        "padding": {},
+        "sha3_tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "chi_0000": {},
+        "chipscope_top": {},
+        "iota_0000": {},
+        "top": {},
+        "pi_0000": {},
+        "rho_0000": {},
+        "pipeline_1_unrolling_1": {},
+        "round_comb": {}
+    },
+    "CompUnits": {
+        "v69jY_d": {
+            "bytes": 17798,
+            "mod": "sha3_tb",
+            "out": "v69jY_d.o",
+            "mode": 4,
+            "checksum": 4294967295,
+            "archive": "archive.3/_24927_archive_1.a"
+        },
+        "amcQw_d": {
+            "bytes": 8097,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "reusePaths": {}
+}
