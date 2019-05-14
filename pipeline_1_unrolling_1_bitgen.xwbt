@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Ahmet Oguz Atli\Verilog\hwsec_project\pipeline_1_unrolling_1.ncd
+OUTFILE=C:\Users\Ahmet Oguz Atli\Verilog\hwsec_project\pipeline_1_unrolling_1.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=C:\Users\Ahmet Oguz Atli\Verilog\hwsec_project
+LICENSE=ISE
+USER_INFO=174621394_1777526976_210699534_260

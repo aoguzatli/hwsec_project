@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline2_unrolling1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline2_unrolling1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx110t-ff1136-1 "pipeline2_unrolling1.ngc" pipeline2_unrolling1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline2_unrolling1_map.ncd pipeline2_unrolling1.ngd pipeline2_unrolling1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline2_unrolling1_map.ncd pipeline2_unrolling1.ncd pipeline2_unrolling1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline2_unrolling1.twx pipeline2_unrolling1.ncd -o pipeline2_unrolling1.twr pipeline2_unrolling1.pcf 
+xpwr -intstyle ise pipeline2_unrolling1.ncd pipeline2_unrolling1.pcf -o pipeline2_unrolling1.pwr 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline2_unrolling1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline2_unrolling1.syr" 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline2_unrolling1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline2_unrolling1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx110t-ff1136-1 "pipeline2_unrolling1.ngc" pipeline2_unrolling1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline2_unrolling1_map.ncd pipeline2_unrolling1.ngd pipeline2_unrolling1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline2_unrolling1_map.ncd pipeline2_unrolling1.ncd pipeline2_unrolling1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline2_unrolling1.twx pipeline2_unrolling1.ncd -o pipeline2_unrolling1.twr pipeline2_unrolling1.pcf 
+xpwr -intstyle ise pipeline2_unrolling1.ncd pipeline2_unrolling1.pcf -o pipeline2_unrolling1.pwr 

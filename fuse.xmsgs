@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="114" delta="unknown" >"C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/absorb_stage.v" Line 52: /* in comment
+<msg type="warning" file="HDLCompiler" num="114" delta="unknown" >"C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/absorb_stage.v" Line 71: /* in comment
 </msg>
 
 </messages>

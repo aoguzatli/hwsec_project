@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\Ahmet Oguz Atli\Verilog\hwsec_project\impact.xsl
+OUTFILE=C:\Users\Ahmet Oguz Atli\Verilog\hwsec_project\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\Users\Ahmet Oguz Atli\Verilog\hwsec_project
+LICENSE=iMPACT
+USER_INFO=iMPACT

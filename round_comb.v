@@ -30,6 +30,7 @@ module round_comb(input clk,
 
 	wire [1599:0] theta_out, rho_out, pi_out, chi_out, iota_out;
 	wire [63:0] round_constant;
+	reg done;
 
 	RC_lookup rc(round_in, round_constant);
 
@@ -45,15 +46,17 @@ module round_comb(input clk,
 			round_out = 5'b0;
 			state_out = 1600'b0;
 			flag_rounds_completed = 1;
+			done = 0;
 		end
 	
-		else if (enable) begin
+		else if (enable && (!done)) begin
 			
 			round_out = round_in + 1;
 			state_out = iota_out;
 			
 			if (round_in == 5'b10111) begin 
 				flag_rounds_completed = 1;
+				done = 1;
 			end 
 			else begin
 				flag_rounds_completed = 0;

@@ -1,0 +1,129 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-HHEASEM::  Mon May 13 22:51:53 2019
+
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_2_map.ncd
+pipeline_1_unrolling_2.ncd pipeline_1_unrolling_2.pcf 
+
+
+Constraints file: pipeline_1_unrolling_2.pcf.
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "pipeline_1_unrolling_2" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.73 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           2 out of 32      6%
+   Number of External IOBs                 396 out of 640    61%
+      Number of LOCed IOBs                   0 out of 396     0%
+
+   Number of Slices                       2748 out of 17280  15%
+   Number of Slice Registers              2696 out of 69120   3%
+      Number used as Flip Flops           2696
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   8757 out of 69120  12%
+   Number of Slice LUT-Flip Flop pairs    9434 out of 69120  13%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 14 secs 
+Finished initial Timing Analysis.  REAL time: 14 secs 
+
+Starting Router
+
+
+Phase  1  : 43727 unrouted;      REAL time: 16 secs 
+
+Phase  2  : 42760 unrouted;      REAL time: 18 secs 
+
+Phase  3  : 27065 unrouted;      REAL time: 1 mins 55 secs 
+
+Phase  4  : 43547 unrouted; (Par is working to improve performance)     REAL time: 8 mins 7 secs 
+WARNING:Route:464 - The router has detected a very dense, congested design. It is extremely unlikely the router will be
+   able to finish the design and meet your timing requirements. To prevent excessive run time the router will change
+   strategy. The router will now work to completely route this design but not to improve timing. This behavior will
+   allow you to use the Static Timing Report and FPGA Editor to isolate the paths with timing problems. The cause of
+   this behavior is either overly difficult constraints, or issues with the implementation or synthesis of logic in the
+   critical timing path. If you are willing to accept a long run time, set the option "-xe c" to override the present
+   behavior.
+
+Updating file: pipeline_1_unrolling_2.ncd with current fully routed design.
+WARNING:Route:562 - 
+    Par  has gone into non timing driven mode hence it will not fix hold errors.
+   To bypass this,  please run Par in -xe mode.
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 mins 38 secs 
+Total REAL time to Router completion: 16 mins 38 secs 
+Total CPU time to Router completion: 15 mins 55 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    20.781ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.564ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sca | SETUP       |         N/A|     2.899ns|     N/A|           0
+  n_clk_BUFGP                               | HOLD        |     0.409ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 17 mins 5 secs 
+Total CPU time to PAR completion: 16 mins 19 secs 
+
+Peak Memory Usage:  4850 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 2
+Number of info messages: 2
+
+Writing design to file pipeline_1_unrolling_2.ncd
+
+
+
+PAR done!

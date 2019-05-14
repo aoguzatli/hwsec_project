@@ -1,4 +1,4 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb_isim_beh.exe" -prj "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb_beh.prj" "work.sha3_tb" "work.glbl" 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb_isim_beh.exe -prj C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb_beh.prj work.sha3_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -12,7 +12,7 @@ Analyzing Verilog file "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/chi.v" in
 Analyzing Verilog file "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/round_comb.v" into library work
 Analyzing Verilog file "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/input_buffer.v" into library work
 Analyzing Verilog file "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/absorb_stage.v" into library work
-WARNING:HDLCompiler:114 - "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/absorb_stage.v" Line 52: /* in comment
+WARNING:HDLCompiler:114 - "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/absorb_stage.v" Line 71: /* in comment
 Analyzing Verilog file "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/test.v" into library work
 Analyzing Verilog file "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
@@ -31,8 +31,8 @@ Compiling module test
 Compiling module sha3_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
+Waiting for 3 sub-compilation(s) to finish...
 Compiled 12 Verilog Units
 Built simulation executable C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/sha3_tb_isim_beh.exe
-Fuse Memory Usage: 140128 KB
-Fuse CPU Usage: 5640 ms
+Fuse Memory Usage: 145532 KB
+Fuse CPU Usage: 7625 ms

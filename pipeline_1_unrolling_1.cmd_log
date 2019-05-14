@@ -21,3 +21,44 @@ xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_
 xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
 xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
 xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ncd pipeline_1_unrolling_1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline_1_unrolling_1.twx pipeline_1_unrolling_1.ncd -o pipeline_1_unrolling_1.twr pipeline_1_unrolling_1.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f pipeline_1_unrolling_1.ut pipeline_1_unrolling_1.ncd 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ncd pipeline_1_unrolling_1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline_1_unrolling_1.twx pipeline_1_unrolling_1.ncd -o pipeline_1_unrolling_1.twr pipeline_1_unrolling_1.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f pipeline_1_unrolling_1.ut pipeline_1_unrolling_1.ncd 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ncd pipeline_1_unrolling_1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline_1_unrolling_1.twx pipeline_1_unrolling_1.ncd -o pipeline_1_unrolling_1.twr pipeline_1_unrolling_1.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f pipeline_1_unrolling_1.ut pipeline_1_unrolling_1.ncd 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ncd pipeline_1_unrolling_1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline_1_unrolling_1.twx pipeline_1_unrolling_1.ncd -o pipeline_1_unrolling_1.twr pipeline_1_unrolling_1.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f pipeline_1_unrolling_1.ut pipeline_1_unrolling_1.ncd 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ncd pipeline_1_unrolling_1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline_1_unrolling_1.twx pipeline_1_unrolling_1.ncd -o pipeline_1_unrolling_1.twr pipeline_1_unrolling_1.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f pipeline_1_unrolling_1.ut pipeline_1_unrolling_1.ncd 
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_1.ngc" pipeline_1_unrolling_1.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_1_map.ncd pipeline_1_unrolling_1.ncd pipeline_1_unrolling_1.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pipeline_1_unrolling_1.twx pipeline_1_unrolling_1.ncd -o pipeline_1_unrolling_1.twr pipeline_1_unrolling_1.pcf -ucf constraints.ucf 

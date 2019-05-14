@@ -1,0 +1,56 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-HHEASEM::  Tue May 14 00:22:47 2019
+
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_4_map.ncd
+pipeline_1_unrolling_4.ncd pipeline_1_unrolling_4.pcf 
+
+
+Constraints file: pipeline_1_unrolling_4.pcf.
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "pipeline_1_unrolling_4" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.73 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           2 out of 32      6%
+   Number of External IOBs                 396 out of 640    61%
+      Number of LOCed IOBs                   0 out of 396     0%
+
+   Number of Slices                       4485 out of 17280  25%
+   Number of Slice Registers              2742 out of 69120   3%
+      Number used as Flip Flops           2742
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                  15863 out of 69120  22%
+   Number of Slice LUT-Flip Flop pairs   16503 out of 69120  23%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 19 secs 
+Finished initial Timing Analysis.  REAL time: 19 secs 
+
+Starting Router
+
+
+Phase  1  : 72828 unrouted;      REAL time: 24 secs 
+
+Phase  2  : 71801 unrouted;      REAL time: 25 secs 
+
+Phase  3  : 51917 unrouted;      REAL time: 3 mins 33 secs 

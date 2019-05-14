@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_4.xst" -ofn "C:/Users/Ahmet Oguz Atli/Verilog/hwsec_project/pipeline_1_unrolling_4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx110t-ff1136-1 "pipeline_1_unrolling_4.ngc" pipeline_1_unrolling_4.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pipeline_1_unrolling_4_map.ncd pipeline_1_unrolling_4.ngd pipeline_1_unrolling_4.pcf 
+par -w -intstyle ise -ol high -mt off pipeline_1_unrolling_4_map.ncd pipeline_1_unrolling_4.ncd pipeline_1_unrolling_4.pcf 

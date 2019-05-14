@@ -1,0 +1,317 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1
+-n 3 -fastpaths -xml pipeline_1_unrolling_1.twx pipeline_1_unrolling_1.ncd -o
+pipeline_1_unrolling_1.twr pipeline_1_unrolling_1.pcf -ucf constraints.ucf
+
+Design file:              pipeline_1_unrolling_1.ncd
+Physical constraint file: pipeline_1_unrolling_1.pcf
+Device,package,speed:     xc5vlx110t,ff1136,-1 (PRODUCTION 1.73 2013-10-13, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+digest<0>   |   11.314(R)|clk_BUFGP         |   0.000|
+digest<1>   |   13.235(R)|clk_BUFGP         |   0.000|
+digest<2>   |   12.115(R)|clk_BUFGP         |   0.000|
+digest<3>   |   11.177(R)|clk_BUFGP         |   0.000|
+digest<4>   |   12.279(R)|clk_BUFGP         |   0.000|
+digest<5>   |   10.990(R)|clk_BUFGP         |   0.000|
+digest<6>   |   12.079(R)|clk_BUFGP         |   0.000|
+digest<7>   |   12.522(R)|clk_BUFGP         |   0.000|
+digest<8>   |   11.190(R)|clk_BUFGP         |   0.000|
+digest<9>   |   12.146(R)|clk_BUFGP         |   0.000|
+digest<10>  |   11.189(R)|clk_BUFGP         |   0.000|
+digest<11>  |   10.054(R)|clk_BUFGP         |   0.000|
+digest<12>  |   10.690(R)|clk_BUFGP         |   0.000|
+digest<13>  |   12.223(R)|clk_BUFGP         |   0.000|
+digest<14>  |   10.760(R)|clk_BUFGP         |   0.000|
+digest<15>  |   11.660(R)|clk_BUFGP         |   0.000|
+digest<16>  |   12.012(R)|clk_BUFGP         |   0.000|
+digest<17>  |   10.762(R)|clk_BUFGP         |   0.000|
+digest<18>  |   10.920(R)|clk_BUFGP         |   0.000|
+digest<19>  |   12.276(R)|clk_BUFGP         |   0.000|
+digest<20>  |   12.282(R)|clk_BUFGP         |   0.000|
+digest<21>  |   12.024(R)|clk_BUFGP         |   0.000|
+digest<22>  |   10.203(R)|clk_BUFGP         |   0.000|
+digest<23>  |   10.743(R)|clk_BUFGP         |   0.000|
+digest<24>  |   11.842(R)|clk_BUFGP         |   0.000|
+digest<25>  |   10.267(R)|clk_BUFGP         |   0.000|
+digest<26>  |    9.725(R)|clk_BUFGP         |   0.000|
+digest<27>  |   11.524(R)|clk_BUFGP         |   0.000|
+digest<28>  |   10.240(R)|clk_BUFGP         |   0.000|
+digest<29>  |   10.958(R)|clk_BUFGP         |   0.000|
+digest<30>  |   11.816(R)|clk_BUFGP         |   0.000|
+digest<31>  |   10.796(R)|clk_BUFGP         |   0.000|
+digest<32>  |   11.670(R)|clk_BUFGP         |   0.000|
+digest<33>  |    9.854(R)|clk_BUFGP         |   0.000|
+digest<34>  |    9.346(R)|clk_BUFGP         |   0.000|
+digest<35>  |   10.020(R)|clk_BUFGP         |   0.000|
+digest<36>  |   10.168(R)|clk_BUFGP         |   0.000|
+digest<37>  |   10.868(R)|clk_BUFGP         |   0.000|
+digest<38>  |    9.434(R)|clk_BUFGP         |   0.000|
+digest<39>  |   11.557(R)|clk_BUFGP         |   0.000|
+digest<40>  |    9.883(R)|clk_BUFGP         |   0.000|
+digest<41>  |   11.312(R)|clk_BUFGP         |   0.000|
+digest<42>  |    9.748(R)|clk_BUFGP         |   0.000|
+digest<43>  |    9.794(R)|clk_BUFGP         |   0.000|
+digest<44>  |   10.413(R)|clk_BUFGP         |   0.000|
+digest<45>  |   10.916(R)|clk_BUFGP         |   0.000|
+digest<46>  |   12.056(R)|clk_BUFGP         |   0.000|
+digest<47>  |   10.571(R)|clk_BUFGP         |   0.000|
+digest<48>  |    8.752(R)|clk_BUFGP         |   0.000|
+digest<49>  |    9.814(R)|clk_BUFGP         |   0.000|
+digest<50>  |    9.637(R)|clk_BUFGP         |   0.000|
+digest<51>  |   10.607(R)|clk_BUFGP         |   0.000|
+digest<52>  |   10.233(R)|clk_BUFGP         |   0.000|
+digest<53>  |    9.898(R)|clk_BUFGP         |   0.000|
+digest<54>  |    9.620(R)|clk_BUFGP         |   0.000|
+digest<55>  |   11.195(R)|clk_BUFGP         |   0.000|
+digest<56>  |   11.558(R)|clk_BUFGP         |   0.000|
+digest<57>  |   11.923(R)|clk_BUFGP         |   0.000|
+digest<58>  |   12.592(R)|clk_BUFGP         |   0.000|
+digest<59>  |   11.542(R)|clk_BUFGP         |   0.000|
+digest<60>  |   12.635(R)|clk_BUFGP         |   0.000|
+digest<61>  |   13.235(R)|clk_BUFGP         |   0.000|
+digest<62>  |   12.543(R)|clk_BUFGP         |   0.000|
+digest<63>  |   12.699(R)|clk_BUFGP         |   0.000|
+digest<64>  |   11.347(R)|clk_BUFGP         |   0.000|
+digest<65>  |    9.882(R)|clk_BUFGP         |   0.000|
+digest<66>  |   11.408(R)|clk_BUFGP         |   0.000|
+digest<67>  |   11.310(R)|clk_BUFGP         |   0.000|
+digest<68>  |   10.703(R)|clk_BUFGP         |   0.000|
+digest<69>  |    9.818(R)|clk_BUFGP         |   0.000|
+digest<70>  |    9.732(R)|clk_BUFGP         |   0.000|
+digest<71>  |   10.837(R)|clk_BUFGP         |   0.000|
+digest<72>  |   11.447(R)|clk_BUFGP         |   0.000|
+digest<73>  |    9.709(R)|clk_BUFGP         |   0.000|
+digest<74>  |   10.705(R)|clk_BUFGP         |   0.000|
+digest<75>  |   10.023(R)|clk_BUFGP         |   0.000|
+digest<76>  |   10.842(R)|clk_BUFGP         |   0.000|
+digest<77>  |   10.264(R)|clk_BUFGP         |   0.000|
+digest<78>  |   12.462(R)|clk_BUFGP         |   0.000|
+digest<79>  |    9.743(R)|clk_BUFGP         |   0.000|
+digest<80>  |   10.536(R)|clk_BUFGP         |   0.000|
+digest<81>  |   10.037(R)|clk_BUFGP         |   0.000|
+digest<82>  |   10.079(R)|clk_BUFGP         |   0.000|
+digest<83>  |   10.015(R)|clk_BUFGP         |   0.000|
+digest<84>  |    9.786(R)|clk_BUFGP         |   0.000|
+digest<85>  |    9.132(R)|clk_BUFGP         |   0.000|
+digest<86>  |    9.670(R)|clk_BUFGP         |   0.000|
+digest<87>  |   11.383(R)|clk_BUFGP         |   0.000|
+digest<88>  |    9.633(R)|clk_BUFGP         |   0.000|
+digest<89>  |    9.229(R)|clk_BUFGP         |   0.000|
+digest<90>  |    9.690(R)|clk_BUFGP         |   0.000|
+digest<91>  |   10.019(R)|clk_BUFGP         |   0.000|
+digest<92>  |    9.783(R)|clk_BUFGP         |   0.000|
+digest<93>  |   10.145(R)|clk_BUFGP         |   0.000|
+digest<94>  |   10.156(R)|clk_BUFGP         |   0.000|
+digest<95>  |   10.114(R)|clk_BUFGP         |   0.000|
+digest<96>  |    8.559(R)|clk_BUFGP         |   0.000|
+digest<97>  |    9.257(R)|clk_BUFGP         |   0.000|
+digest<98>  |    9.255(R)|clk_BUFGP         |   0.000|
+digest<99>  |   10.607(R)|clk_BUFGP         |   0.000|
+digest<100> |   10.430(R)|clk_BUFGP         |   0.000|
+digest<101> |   11.465(R)|clk_BUFGP         |   0.000|
+digest<102> |    9.910(R)|clk_BUFGP         |   0.000|
+digest<103> |   11.333(R)|clk_BUFGP         |   0.000|
+digest<104> |    9.358(R)|clk_BUFGP         |   0.000|
+digest<105> |    8.901(R)|clk_BUFGP         |   0.000|
+digest<106> |    9.997(R)|clk_BUFGP         |   0.000|
+digest<107> |    9.501(R)|clk_BUFGP         |   0.000|
+digest<108> |    9.061(R)|clk_BUFGP         |   0.000|
+digest<109> |    9.332(R)|clk_BUFGP         |   0.000|
+digest<110> |    9.679(R)|clk_BUFGP         |   0.000|
+digest<111> |    9.765(R)|clk_BUFGP         |   0.000|
+digest<112> |    9.226(R)|clk_BUFGP         |   0.000|
+digest<113> |    9.846(R)|clk_BUFGP         |   0.000|
+digest<114> |    8.918(R)|clk_BUFGP         |   0.000|
+digest<115> |    9.563(R)|clk_BUFGP         |   0.000|
+digest<116> |    9.279(R)|clk_BUFGP         |   0.000|
+digest<117> |    8.878(R)|clk_BUFGP         |   0.000|
+digest<118> |    9.710(R)|clk_BUFGP         |   0.000|
+digest<119> |    8.658(R)|clk_BUFGP         |   0.000|
+digest<120> |   13.939(R)|clk_BUFGP         |   0.000|
+digest<121> |   12.168(R)|clk_BUFGP         |   0.000|
+digest<122> |   13.231(R)|clk_BUFGP         |   0.000|
+digest<123> |    9.754(R)|clk_BUFGP         |   0.000|
+digest<124> |   12.905(R)|clk_BUFGP         |   0.000|
+digest<125> |    9.747(R)|clk_BUFGP         |   0.000|
+digest<126> |   10.570(R)|clk_BUFGP         |   0.000|
+digest<127> |   12.140(R)|clk_BUFGP         |   0.000|
+digest<128> |    9.759(R)|clk_BUFGP         |   0.000|
+digest<129> |   10.105(R)|clk_BUFGP         |   0.000|
+digest<130> |   10.866(R)|clk_BUFGP         |   0.000|
+digest<131> |   12.106(R)|clk_BUFGP         |   0.000|
+digest<132> |   10.773(R)|clk_BUFGP         |   0.000|
+digest<133> |    9.736(R)|clk_BUFGP         |   0.000|
+digest<134> |   10.353(R)|clk_BUFGP         |   0.000|
+digest<135> |    8.716(R)|clk_BUFGP         |   0.000|
+digest<136> |    9.762(R)|clk_BUFGP         |   0.000|
+digest<137> |    9.999(R)|clk_BUFGP         |   0.000|
+digest<138> |   11.475(R)|clk_BUFGP         |   0.000|
+digest<139> |    9.389(R)|clk_BUFGP         |   0.000|
+digest<140> |   11.413(R)|clk_BUFGP         |   0.000|
+digest<141> |    9.646(R)|clk_BUFGP         |   0.000|
+digest<142> |   10.164(R)|clk_BUFGP         |   0.000|
+digest<143> |   11.694(R)|clk_BUFGP         |   0.000|
+digest<144> |    9.937(R)|clk_BUFGP         |   0.000|
+digest<145> |   10.185(R)|clk_BUFGP         |   0.000|
+digest<146> |    9.524(R)|clk_BUFGP         |   0.000|
+digest<147> |   10.562(R)|clk_BUFGP         |   0.000|
+digest<148> |   12.408(R)|clk_BUFGP         |   0.000|
+digest<149> |   11.147(R)|clk_BUFGP         |   0.000|
+digest<150> |   10.546(R)|clk_BUFGP         |   0.000|
+digest<151> |    9.680(R)|clk_BUFGP         |   0.000|
+digest<152> |   11.144(R)|clk_BUFGP         |   0.000|
+digest<153> |   10.269(R)|clk_BUFGP         |   0.000|
+digest<154> |    9.881(R)|clk_BUFGP         |   0.000|
+digest<155> |   10.416(R)|clk_BUFGP         |   0.000|
+digest<156> |    9.962(R)|clk_BUFGP         |   0.000|
+digest<157> |    9.828(R)|clk_BUFGP         |   0.000|
+digest<158> |    9.648(R)|clk_BUFGP         |   0.000|
+digest<159> |    9.760(R)|clk_BUFGP         |   0.000|
+digest<160> |    8.588(R)|clk_BUFGP         |   0.000|
+digest<161> |    9.768(R)|clk_BUFGP         |   0.000|
+digest<162> |   10.255(R)|clk_BUFGP         |   0.000|
+digest<163> |   10.536(R)|clk_BUFGP         |   0.000|
+digest<164> |   10.439(R)|clk_BUFGP         |   0.000|
+digest<165> |    9.925(R)|clk_BUFGP         |   0.000|
+digest<166> |    9.957(R)|clk_BUFGP         |   0.000|
+digest<167> |   10.650(R)|clk_BUFGP         |   0.000|
+digest<168> |    8.712(R)|clk_BUFGP         |   0.000|
+digest<169> |    9.066(R)|clk_BUFGP         |   0.000|
+digest<170> |    9.266(R)|clk_BUFGP         |   0.000|
+digest<171> |   10.264(R)|clk_BUFGP         |   0.000|
+digest<172> |   10.414(R)|clk_BUFGP         |   0.000|
+digest<173> |    9.357(R)|clk_BUFGP         |   0.000|
+digest<174> |   10.193(R)|clk_BUFGP         |   0.000|
+digest<175> |   10.341(R)|clk_BUFGP         |   0.000|
+digest<176> |   10.048(R)|clk_BUFGP         |   0.000|
+digest<177> |    9.271(R)|clk_BUFGP         |   0.000|
+digest<178> |    9.703(R)|clk_BUFGP         |   0.000|
+digest<179> |   10.219(R)|clk_BUFGP         |   0.000|
+digest<180> |   10.136(R)|clk_BUFGP         |   0.000|
+digest<181> |   10.326(R)|clk_BUFGP         |   0.000|
+digest<182> |   10.158(R)|clk_BUFGP         |   0.000|
+digest<183> |    9.077(R)|clk_BUFGP         |   0.000|
+digest<184> |   10.083(R)|clk_BUFGP         |   0.000|
+digest<185> |   10.150(R)|clk_BUFGP         |   0.000|
+digest<186> |    9.702(R)|clk_BUFGP         |   0.000|
+digest<187> |    9.711(R)|clk_BUFGP         |   0.000|
+digest<188> |   10.767(R)|clk_BUFGP         |   0.000|
+digest<189> |   10.517(R)|clk_BUFGP         |   0.000|
+digest<190> |    9.810(R)|clk_BUFGP         |   0.000|
+digest<191> |   10.129(R)|clk_BUFGP         |   0.000|
+digest<192> |   10.007(R)|clk_BUFGP         |   0.000|
+digest<193> |    9.775(R)|clk_BUFGP         |   0.000|
+digest<194> |   10.054(R)|clk_BUFGP         |   0.000|
+digest<195> |   10.389(R)|clk_BUFGP         |   0.000|
+digest<196> |    9.981(R)|clk_BUFGP         |   0.000|
+digest<197> |   10.770(R)|clk_BUFGP         |   0.000|
+digest<198> |    9.839(R)|clk_BUFGP         |   0.000|
+digest<199> |    8.358(R)|clk_BUFGP         |   0.000|
+digest<200> |   10.033(R)|clk_BUFGP         |   0.000|
+digest<201> |   10.388(R)|clk_BUFGP         |   0.000|
+digest<202> |   11.037(R)|clk_BUFGP         |   0.000|
+digest<203> |    9.414(R)|clk_BUFGP         |   0.000|
+digest<204> |   10.580(R)|clk_BUFGP         |   0.000|
+digest<205> |    9.255(R)|clk_BUFGP         |   0.000|
+digest<206> |    9.110(R)|clk_BUFGP         |   0.000|
+digest<207> |    9.464(R)|clk_BUFGP         |   0.000|
+digest<208> |   12.059(R)|clk_BUFGP         |   0.000|
+digest<209> |    9.758(R)|clk_BUFGP         |   0.000|
+digest<210> |   10.885(R)|clk_BUFGP         |   0.000|
+digest<211> |    8.924(R)|clk_BUFGP         |   0.000|
+digest<212> |   10.622(R)|clk_BUFGP         |   0.000|
+digest<213> |   10.554(R)|clk_BUFGP         |   0.000|
+digest<214> |   10.503(R)|clk_BUFGP         |   0.000|
+digest<215> |   10.827(R)|clk_BUFGP         |   0.000|
+digest<216> |   10.421(R)|clk_BUFGP         |   0.000|
+digest<217> |   10.879(R)|clk_BUFGP         |   0.000|
+digest<218> |    9.763(R)|clk_BUFGP         |   0.000|
+digest<219> |    9.282(R)|clk_BUFGP         |   0.000|
+digest<220> |   10.214(R)|clk_BUFGP         |   0.000|
+digest<221> |    9.842(R)|clk_BUFGP         |   0.000|
+digest<222> |   10.831(R)|clk_BUFGP         |   0.000|
+digest<223> |   11.458(R)|clk_BUFGP         |   0.000|
+digest<224> |   10.726(R)|clk_BUFGP         |   0.000|
+digest<225> |    9.055(R)|clk_BUFGP         |   0.000|
+digest<226> |    9.764(R)|clk_BUFGP         |   0.000|
+digest<227> |    9.325(R)|clk_BUFGP         |   0.000|
+digest<228> |   10.372(R)|clk_BUFGP         |   0.000|
+digest<229> |   10.797(R)|clk_BUFGP         |   0.000|
+digest<230> |   10.776(R)|clk_BUFGP         |   0.000|
+digest<231> |   10.359(R)|clk_BUFGP         |   0.000|
+digest<232> |    8.931(R)|clk_BUFGP         |   0.000|
+digest<233> |    9.344(R)|clk_BUFGP         |   0.000|
+digest<234> |    9.152(R)|clk_BUFGP         |   0.000|
+digest<235> |    8.922(R)|clk_BUFGP         |   0.000|
+digest<236> |   10.281(R)|clk_BUFGP         |   0.000|
+digest<237> |    8.968(R)|clk_BUFGP         |   0.000|
+digest<238> |    8.934(R)|clk_BUFGP         |   0.000|
+digest<239> |    9.371(R)|clk_BUFGP         |   0.000|
+digest<240> |   10.541(R)|clk_BUFGP         |   0.000|
+digest<241> |    8.886(R)|clk_BUFGP         |   0.000|
+digest<242> |    8.865(R)|clk_BUFGP         |   0.000|
+digest<243> |    8.759(R)|clk_BUFGP         |   0.000|
+digest<244> |   10.275(R)|clk_BUFGP         |   0.000|
+digest<245> |    8.911(R)|clk_BUFGP         |   0.000|
+digest<246> |   10.022(R)|clk_BUFGP         |   0.000|
+digest<247> |    9.764(R)|clk_BUFGP         |   0.000|
+digest<248> |    8.938(R)|clk_BUFGP         |   0.000|
+digest<249> |    9.464(R)|clk_BUFGP         |   0.000|
+digest<250> |   10.699(R)|clk_BUFGP         |   0.000|
+digest<251> |   10.432(R)|clk_BUFGP         |   0.000|
+digest<252> |   10.125(R)|clk_BUFGP         |   0.000|
+digest<253> |   10.296(R)|clk_BUFGP         |   0.000|
+digest<254> |   11.386(R)|clk_BUFGP         |   0.000|
+digest<255> |   10.427(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   10.566|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon May 13 15:14:07 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4939 MB
+
+
+

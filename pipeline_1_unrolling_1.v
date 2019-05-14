@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module pipeline_1_unrolling_1(	input clk,
+module test(	input clk,
 											/*input scan_clk,
 											input reset,
 											input enable,
@@ -29,13 +29,14 @@ module pipeline_1_unrolling_1(	input clk,
 	wire enable, reset;
 	wire [135:0] scan_in;
 	wire scan_clk;
+	genvar i, j, k, b;
 
 	wire [1087:0] block;
 	wire [1599:0] prev_state, next_state;
 	wire [4:0] prev_round, next_round;
 	wire flag_rounds_completed;
 	
-	assign digest = prev_state[255:0];
+	//assign digest = prev_state[255:0];
 	
 	input_buffer inputbuf(	.scan_clk(scan_clk),
 									.scan_in(scan_in),
@@ -58,6 +59,24 @@ module pipeline_1_unrolling_1(	input clk,
 							.flag_rounds_completed(flag_rounds_completed) );
 
 
+	// Digest
+	
+	generate
+	
+		for (i = 0; i < 4; i=i+1) begin: iloop_xor
+			for (j = 0; j < 1; j=j+1) begin: jloop_xor
+				for (k = 0; k < 8; k=k+1) begin: kloop_xor
+					for (b = 7; b >= 0; b=b-1) begin: bloop_xor
+						assign digest[255-((5*j+i)*64 + 8*k) + b-7] = prev_state[((5*j+i)*64 + 8*k + b)];
+					end
+				end
+			end
+		end
+	
+	endgenerate
+
+
+
 	//////////////////////////////////////////////////////////////
 	//ICON, VIO, and ILA instantiations. No need to edit this part
 	 wire [138:0] vio_op;
@@ -67,7 +86,7 @@ module pipeline_1_unrolling_1(	input clk,
 	 assign enable=vio_op[0];
 	 
 	 wire [255:0] vio_ip;
-	 assign vio_ip[255:0]= prev_state[255:0];
+	 assign vio_ip[255:0]= digest;
 	 
 	 wire ila_data;
 	 assign ila_data=flag_rounds_completed; 

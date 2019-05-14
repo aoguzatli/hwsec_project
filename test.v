@@ -18,13 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module test(	input clk,
+module pipeline_1_unrolling_1(	input clk,
 											input scan_clk,
 											input reset,
 											input enable,
 											input [135:0] scan_in,
 											output [255:0] digest,
 											output complete
+											//input [1087:0] block
 	 );
 
 
@@ -32,14 +33,30 @@ module test(	input clk,
 	wire [1599:0] prev_state, next_state;
 	wire [4:0] prev_round, next_round;
 	wire flag_rounds_completed;
+	genvar i, j, k, b;
 	
 	assign complete = flag_rounds_completed;
 	
-	assign digest = prev_state[255:0];
+	//assign digest = prev_state[255:0];
 	
+	generate
+	
+		for (i = 0; i < 4; i=i+1) begin: iloop_xor
+			for (j = 0; j < 1; j=j+1) begin: jloop_xor
+				for (k = 0; k < 8; k=k+1) begin: kloop_xor
+					for (b = 7; b >= 0; b=b-1) begin: bloop_xor
+						assign digest[255-((5*j+i)*64 + 8*k) + b-7] = prev_state[((5*j+i)*64 + 8*k + b)];
+					end
+				end
+			end
+		end
+	
+	endgenerate
+	
+
 	input_buffer inputbuf(	.scan_clk(scan_clk),
 									.scan_in(scan_in),
-									.block(block) );
+									.block(block) ); 
 	
 	absorb_stage absorb(
 								.block(block),

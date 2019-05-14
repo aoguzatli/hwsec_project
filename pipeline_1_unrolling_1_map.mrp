@@ -1,0 +1,1332 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'pipeline_1_unrolling_1'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o pipeline_1_unrolling_1_map.ncd
+pipeline_1_unrolling_1.ngd pipeline_1_unrolling_1.pcf 
+Target Device  : xc5vlx110t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Mon May 13 15:09:23 2019
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  118
+Slice Logic Utilization:
+  Number of Slice Registers:                 5,359 out of  69,120    7%
+    Number used as Flip Flops:               5,358
+    Number used as Latches:                      1
+  Number of Slice LUTs:                      6,084 out of  69,120    8%
+    Number used as logic:                    6,038 out of  69,120    8%
+      Number using O6 output only:           5,973
+      Number using O5 output only:              58
+      Number using O5 and O6:                    7
+    Number used as Memory:                      38 out of  17,920    1%
+      Number used as Shift Register:            38
+        Number using O6 output only:            37
+        Number using O5 and O6:                  1
+    Number used as exclusive route-thru:         8
+  Number of route-thrus:                        66
+    Number using O6 output only:                66
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 2,735 out of  17,280   15%
+  Number of LUT Flip Flop pairs used:        8,491
+    Number with an unused Flip Flop:         3,132 out of   8,491   36%
+    Number with an unused LUT:               2,407 out of   8,491   28%
+    Number of fully used LUT-FF pairs:       2,952 out of   8,491   34%
+    Number of unique control sets:             712
+    Number of slice register sites lost
+      to control set restrictions:           2,094 out of  69,120    3%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       257 out of     640   40%
+    Number of LOCed IOBs:                        1 out of     257    1%
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                       1 out of     148    1%
+    Number using BlockRAM only:                  1
+    Total primitives used:
+      Number of 18k BlockRAM used:               1
+    Total Memory used (KB):                     18 out of   5,328    1%
+  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
+    Number used as BUFGs:                        2
+  Number of BSCANs:                              1 out of       4   25%
+
+  Number of RPM macros:            4
+Average Fanout of Non-Clock Nets:                3.86
+
+Peak Memory Usage:  4926 MB
+Total REAL time to MAP completion:  2 mins 39 secs 
+Total CPU time to MAP completion:   2 mins 35 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ilacntbus<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<200>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<201>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<202>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<203>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<196>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<197>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<198>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<199>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<240>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<241>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<242>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<243>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<180>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<181>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<182>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<183>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<216>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<217>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<218>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<219>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<176>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<177>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<178>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<179>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<139>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<204>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<205>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<206>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<207>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<248>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<249>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<250>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<251>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<244>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<245>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<246>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<247>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<184>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<185>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<186>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<187>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<168>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<169>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<170>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<171>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<160>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<161>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<162>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<163>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<188>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<189>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<190>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<191>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<164>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<165>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<166>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<167>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<172>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<173>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<174>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<175>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<152>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<153>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<154>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<155>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<156>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<157>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<158>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<159>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<232>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<233>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<234>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<235>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<228>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<229>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<230>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<231>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<148>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<149>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<150>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<151>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<144>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<145>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<146>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<147>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<224>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<225>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<226>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<227>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<212>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<213>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<214>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<215>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<252>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<253>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<254>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<255>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<220>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<221>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<222>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<223>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<236>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<237>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<238>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<239>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<140>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<141>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<142>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<143>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<208>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<209>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<210>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<211>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<192>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<193>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<194>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <VIO0/U0/I_VIO/UPDATE<195>> is
+   incomplete. The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ilacntbus<10> has no load.
+INFO:LIT:395 - The above info message is repeated 140 more times for the
+   following (max. 5 shown):
+   ilacntbus<11>,
+   ilacntbus<15>,
+   ilacntbus<16>,
+   ilacntbus<17>,
+   ilacntbus<18>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 257 IOs, 1 are locked
+   and 256 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 195 block(s) removed
+  26 block(s) optimized away
+ 181 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block "ICON0/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B" (ROM)
+removed.
+The signal "cntbus<10>" is sourceless and has been removed.
+The signal "cntbus<11>" is sourceless and has been removed.
+The signal "cntbus<12>" is sourceless and has been removed.
+ Sourceless block "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>71" (ROM) removed.
+  The signal "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>71" is sourceless and has been
+removed.
+The signal "cntbus<13>" is sourceless and has been removed.
+The signal "cntbus<14>" is sourceless and has been removed.
+The signal "cntbus<15>" is sourceless and has been removed.
+The signal "cntbus<16>" is sourceless and has been removed.
+The signal "cntbus<17>" is sourceless and has been removed.
+The signal "cntbus<18>" is sourceless and has been removed.
+ Sourceless block "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>35" (ROM) removed.
+  The signal "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>35" is sourceless and has been
+removed.
+The signal "cntbus<19>" is sourceless and has been removed.
+The signal "cntbus<20>" is sourceless and has been removed.
+The signal "cntbus<21>" is sourceless and has been removed.
+The signal "cntbus<22>" is sourceless and has been removed.
+The signal "cntbus<23>" is sourceless and has been removed.
+The signal "cntbus<24>" is sourceless and has been removed.
+ Sourceless block "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>164" (ROM) removed.
+  The signal "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>164" is sourceless and has been
+removed.
+The signal "cntbus<25>" is sourceless and has been removed.
+The signal "cntbus<26>" is sourceless and has been removed.
+The signal "cntbus<27>" is sourceless and has been removed.
+The signal "cntbus<28>" is sourceless and has been removed.
+The signal "cntbus<29>" is sourceless and has been removed.
+The signal "cntbus<30>" is sourceless and has been removed.
+ Sourceless block "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>128" (ROM) removed.
+  The signal "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>128" is sourceless and has been
+removed.
+The signal "cntbus<31>" is sourceless and has been removed.
+The signal "cntbus<32>" is sourceless and has been removed.
+The signal "cntbus<33>" is sourceless and has been removed.
+The signal "cntbus<34>" is sourceless and has been removed.
+The signal "cntbus<35>" is sourceless and has been removed.
+The signal "cntbus<8>" is sourceless and has been removed.
+ Sourceless block "VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>260_SW0" (ROM) removed.
+  The signal "VIO0/N38" is sourceless and has been removed.
+The signal "cntbus<9>" is sourceless and has been removed.
+The signal "ilacntbus<10>" is sourceless and has been removed.
+The signal "ilacntbus<11>" is sourceless and has been removed.
+The signal "ilacntbus<15>" is sourceless and has been removed.
+The signal "ilacntbus<16>" is sourceless and has been removed.
+The signal "ilacntbus<17>" is sourceless and has been removed.
+The signal "ilacntbus<18>" is sourceless and has been removed.
+The signal "ilacntbus<19>" is sourceless and has been removed.
+The signal "ilacntbus<21>" is sourceless and has been removed.
+The signal "ilacntbus<22>" is sourceless and has been removed.
+The signal "ilacntbus<23>" is sourceless and has been removed.
+The signal "ilacntbus<24>" is sourceless and has been removed.
+The signal "ilacntbus<25>" is sourceless and has been removed.
+The signal "ilacntbus<26>" is sourceless and has been removed.
+The signal "ilacntbus<27>" is sourceless and has been removed.
+The signal "ilacntbus<28>" is sourceless and has been removed.
+The signal "ilacntbus<29>" is sourceless and has been removed.
+The signal "ilacntbus<30>" is sourceless and has been removed.
+The signal "ilacntbus<31>" is sourceless and has been removed.
+The signal "ilacntbus<32>" is sourceless and has been removed.
+The signal "ilacntbus<33>" is sourceless and has been removed.
+The signal "ilacntbus<34>" is sourceless and has been removed.
+The signal "ilacntbus<35>" is sourceless and has been removed.
+The signal "ilacntbus<7>" is sourceless and has been removed.
+The signal "ICON0/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and has been removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_LCE" (ROM)
+removed.
+The signal "ICON0/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and has been removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_LCE" (ROM)
+removed.
+The signal "ICON0/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless and has been
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_LCE" (ROM)
+removed.
+The signal "ICON0/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless and has been
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_LCE" (ROM)
+removed.
+The signal "ICON0/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless and has been
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_LCE" (ROM)
+removed.
+The signal "ICON0/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless and has been
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_LCE" (ROM)
+removed.
+The signal "ICON0/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless and has been
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_LCE" (ROM)
+removed.
+The signal "VIO0/ASYNC_OUT<255>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<254>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<253>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<252>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<251>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<250>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<249>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<248>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<247>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<246>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<245>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<244>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<243>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<242>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<241>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<240>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<239>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<238>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<237>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<236>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<235>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<234>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<233>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<232>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<231>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<230>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<229>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<228>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<227>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<226>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<225>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<224>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<223>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<222>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<221>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<220>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<219>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<218>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<217>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<216>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<215>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<214>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<213>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<212>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<211>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<210>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<209>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<208>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<207>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<206>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<205>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<204>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<203>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<202>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<201>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<200>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<199>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<198>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<197>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<196>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<195>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<194>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<193>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<192>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<191>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<190>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<189>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<188>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<187>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<186>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<185>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<184>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<183>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<182>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<181>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<180>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<179>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<178>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<177>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<176>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<175>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<174>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<173>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<172>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<171>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<170>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<169>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<168>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<167>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<166>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<165>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<164>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<163>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<162>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<161>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<160>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<159>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<158>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<157>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<156>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<155>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<154>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<153>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<152>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<151>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<150>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<149>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<148>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<147>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<146>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<145>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<144>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<143>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<142>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<141>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<140>" is sourceless and has been removed.
+The signal "VIO0/ASYNC_OUT<139>" is sourceless and has been removed.
+The signal
+"ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GA
+NDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_
+SRL_SET/SRL_Q_O" is sourceless and has been removed.
+Unused block "ICON0/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[15].U_LUT" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_LCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_LCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[2].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[3].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[3].U_LCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_HCE" (ROM) removed.
+Unused block "ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_HCE" (ROM) removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[139].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[140].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[141].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[142].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[143].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[144].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[145].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[146].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[147].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[148].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[149].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[150].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[151].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[152].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[153].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[154].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[155].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[156].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[157].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[158].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[159].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[160].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[161].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[162].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[163].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[164].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[165].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[166].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[167].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[168].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[169].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[170].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[171].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[172].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[173].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[174].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[175].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[176].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[177].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[178].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[179].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[180].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[181].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[182].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[183].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[184].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[185].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[186].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[187].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[188].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[189].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[190].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[191].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[192].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[193].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[194].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[195].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[196].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[197].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[198].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[199].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[200].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[201].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[202].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[203].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[204].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[205].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[206].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[207].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[208].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[209].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[210].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[211].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[212].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[213].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[214].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[215].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[216].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[217].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[218].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[219].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[220].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[221].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[222].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[223].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[224].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[225].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[226].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[227].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[228].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[229].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[230].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[231].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[232].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[233].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[234].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[235].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[236].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[237].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[238].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[239].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[240].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[241].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[242].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[243].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[244].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[245].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[246].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[247].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[248].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[249].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[250].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[251].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[252].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[253].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[254].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block "VIO0/U0/I_VIO/GEN_ASYNC_OUT[255].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		ICON0/XST_GND
+VCC 		ICON0/XST_VCC
+GND
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_C
+S_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_
+GAND_SRL_SLICE/XST_GND
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_C
+S_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_
+GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_C
+S_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U
+_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U
+_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U
+_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U
+_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+LUT4 		ILA0/U0/I_YES_D.U_ILA/U_STAT/F_SSTAT[10].I_STAT.U_STAT
+   optimized to 0
+LUT4 		ILA0/U0/I_YES_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+GND
+		ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_G
+ANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND
+_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_G
+ANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND
+_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_G
+ANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND
+_SRL_SET/XST_VCC
+GND 		ILA0/XST_GND
+VCC 		ILA0/XST_VCC
+LUT4 		VIO0/U0/I_VIO/U_STATUS/F_STAT[5].I_STAT.U_STAT
+   optimized to 0
+LUT4 		VIO0/U0/I_VIO/U_STATUS/F_STAT[7].I_STAT.U_STAT
+   optimized to 0
+LUT4 		VIO0/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O_5_f7_SW0
+   optimized to 1
+LUT6 		VIO0/U0/I_VIO/U_STATUS/iSTAT_CNT<7>260
+   optimized to 1
+GND 		VIO0/XST_GND
+VCC 		VIO0/XST_VCC
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| digest<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<8>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<9>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<10>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<11>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<12>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<13>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<14>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<15>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<16>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<17>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<18>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<19>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<20>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<21>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<22>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<23>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<24>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<25>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<26>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<27>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<28>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<29>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<30>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<31>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<32>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<33>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<34>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<35>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<36>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<37>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<38>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<39>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<40>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<41>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<42>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<43>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<44>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<45>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<46>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<47>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<48>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<49>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<50>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<51>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<52>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<53>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<54>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<55>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<56>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<57>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<58>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<59>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<60>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<61>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<62>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<63>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<64>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<65>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<66>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<67>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<68>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<69>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<70>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<71>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<72>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<73>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<74>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<75>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<76>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<77>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<78>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<79>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<80>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<81>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<82>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<83>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<84>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<85>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<86>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<87>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<88>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<89>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<90>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<91>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<92>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<93>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<94>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<95>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<96>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<97>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<98>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<99>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<100>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<101>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<102>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<103>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<104>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<105>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<106>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<107>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<108>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<109>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<110>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<111>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<112>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<113>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<114>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<115>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<116>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<117>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<118>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<119>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<120>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<121>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<122>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<123>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<124>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<125>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<126>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<127>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<128>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<129>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<130>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<131>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<132>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<133>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<134>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<135>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<136>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<137>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<138>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<139>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<140>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<141>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<142>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<143>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<144>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<145>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<146>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<147>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<148>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<149>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<150>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<151>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<152>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<153>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<154>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<155>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<156>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<157>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<158>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<159>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<160>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<161>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<162>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<163>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<164>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<165>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<166>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<167>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<168>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<169>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<170>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<171>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<172>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<173>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<174>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<175>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<176>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<177>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<178>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<179>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<180>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<181>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<182>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<183>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<184>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<185>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<186>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<187>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<188>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<189>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<190>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<191>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<192>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<193>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<194>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<195>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<196>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<197>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<198>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<199>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<200>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<201>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<202>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<203>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<204>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<205>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<206>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<207>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<208>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<209>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<210>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<211>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<212>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<213>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<214>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<215>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<216>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<217>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<218>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<219>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<220>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<221>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<222>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<223>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<224>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<225>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<226>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<227>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<228>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<229>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<230>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<231>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<232>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<233>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<234>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<235>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<236>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<237>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<238>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<239>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<240>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<241>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<242>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<243>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<244>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<245>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<246>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<247>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<248>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<249>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<250>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<251>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<252>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<253>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<254>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| digest<255>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_
+GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/U_SCNT_CMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET_MSET
+ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_CS
+_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/U_WCNT_HCMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET_MSET
+ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_CS
+_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/U_WCNT_LCMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET_MSET
+ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GAN
+DX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_S
+RL_SET/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_G
+ANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND
+_SRL_SET_MSET
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
